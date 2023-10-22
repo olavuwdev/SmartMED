@@ -22,6 +22,6 @@ services:
           - 8010:8080
         environment:
           TZ: 'America/Fortaleza'
-          DATABASE_HOST: 172.18.0.2
+          DATABASE_HOST: mysql
           DATABASE_USER: root
           DATABASE_PASSWORD: aula_mysql
