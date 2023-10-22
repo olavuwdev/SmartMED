@@ -5,6 +5,7 @@ services:
         ports:
             - '${FORWARD_DB_PORT:-3306}:3306'
         environment:
+            TZ: 'America/Fortaleza'
             MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
             MYSQL_ROOT_HOST: '%'
             MYSQL_DATABASE: '${DB_DATABASE}'
@@ -14,6 +15,18 @@ services:
         volumes:
             - 'mysql:/var/lib/mysql'
             - './vendor/laravel/sail/database/mysql/create-testing-database.sh:/docker-entrypoint-initdb.d/10-create-testing-database.sh'
+
+    phpmyadmin:
+        container_name: phpmyadmin
+        image: docker.io/bitnami/phpmyadmin:5
+        ports:
+          - 8010:8080
+        environment:
+          TZ: 'America/Fortaleza'
+          DATABASE_HOST: 127.0.0.1
+          DATABASE_USER: root
+          DATABASE_PASSWORD: aula_mysql
+          DATABASE_PORT_NUMBER: 3306
 
 volumes:
     mysql:
