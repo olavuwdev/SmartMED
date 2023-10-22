@@ -2,19 +2,18 @@ version: '3'
 services:
     mysql:
         container_name: mysql
-        image: 'mysql/mysql-server:8.0'
-        ports:
-            - '${FORWARD_DB_PORT:-3306}:3306'
-        environment:
-            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
-            MYSQL_ROOT_HOST: '%'
-            MYSQL_DATABASE: '${DB_DATABASE}'
-            MYSQL_USER: '${DB_USERNAME}'
-            MYSQL_PASSWORD: '${DB_PASSWORD}'
-            MYSQL_ALLOW_EMPTY_PASSWORD: 1
+        image: mysql:8.0-debian
+        restart: unless-stopped
         volumes:
-            - 'mysql:/var/lib/mysql'
-            - './vendor/laravel/sail/database/mysql/create-testing-database.sh:/docker-entrypoint-initdb.d/10-create-testing-database.sh'
+          - ./mysql:/var/lib/mysql:delegated
+        ports:
+          - 3310:3306
+        environment:
+          TZ: 'America/Fortaleza'
+          MYSQL_DATABASE: aula_mysql
+          MYSQL_USER: aula_mysql
+          MYSQL_PASSWORD: aula_mysql
+          MYSQL_ROOT_PASSWORD: aula_mysql
 
     phpmyadmin:
         container_name: phpmyadmin
@@ -26,7 +25,3 @@ services:
           DATABASE_HOST: 172.18.0.2
           DATABASE_USER: root
           DATABASE_PASSWORD: aula_mysql
-
-volumes:
-    mysql:
-        driver: local
