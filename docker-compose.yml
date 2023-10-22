@@ -7,7 +7,7 @@ services:
         volumes:
           - ./mysql:/var/lib/mysql:delegated
         ports:
-          - 3310:3306
+          - 3306:3306
         environment:
           TZ: 'America/Fortaleza'
           MYSQL_DATABASE: aula_mysql
