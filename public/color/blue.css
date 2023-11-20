@@ -1,0 +1,94 @@
+/*
+#1 color = #0B6E4F;
+#2 color = #0B6E4F;
+*/
+
+a:hover,
+a:focus {
+    color: #0B6E4F;
+}
+
+
+.con1 > div, .con2 > div, .con3 > div { 
+	background-color: #0B6E4F;
+}
+
+.scrollup:hover {
+	background: #0B6E4F;
+}
+
+
+/* service */
+
+.service-icon span {
+	color: #0B6E4F;
+}
+
+
+
+/* button */
+.btn-skin {
+  background-color: #0B6E4F;
+  border-color: #0B6E4F;
+}
+
+
+/* top */
+.top-area {
+	background: #0B6E4F;
+}
+
+/* menu */
+
+.navbar-custom ul.nav ul.dropdown-menu li a:hover {
+	color: #0B6E4F;
+}
+.navbar-custom.top-nav-collapse .nav li a:hover,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li.active a,.navbar-custom.top-nav-collapse .nav li.active a  {
+    color: #0B6E4F;
+}
+
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+    background-color: #0B6E4F;
+}
+
+
+.bg-skin {
+	background: #0B6E4F;
+}
+
+.highlight-color {
+	background-color: #0B6E4F;
+}
+.color {
+	color: #0B6E4F;
+}
+
+/* pricing box  */
+.pricing-content.featured h2,.pricing-content.featured .price-bottom {
+	background-color:#0B6E4F;
+}
+.pricing-content.featured h3 {
+	background:#0B6E4F;
+}
+
+
+
+/* team */
+
+
+form#contact-form input:focus,form#contact-form select:focus,form#contact-form textarea:focus {
+	border-color: #0B6E4F;
+}
+form.search-form input:focus {
+	border-color: #0B6E4F;
+}
+
+/* footer */
+ul.footer-menu li a:hover {
+	color: #0B6E4F;
+}
+
