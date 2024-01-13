@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class About
- * 
+ *
  * @property int $id
  * @property string $text_quem_somos
  * @property string $text_missoes
@@ -26,6 +26,7 @@ class About extends Model
 	protected $fillable = [
 		'text_quem_somos',
 		'text_missoes',
-		'text_valores'
+		'text_valores',
+        'text_visao'
 	];
 }

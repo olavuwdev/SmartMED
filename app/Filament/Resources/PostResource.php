@@ -27,13 +27,14 @@ class PostResource extends Resource
                 Forms\Components\TextInput::make('titulo')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('texto')
+                Forms\Components\RichEditor::make('texto')
                     ->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('imagem')
                     ->required()
-                    ->preserveFilenames(),
+                    ->preserveFilenames()
+                    ->directory('img-blog'),
             ]);
     }
 

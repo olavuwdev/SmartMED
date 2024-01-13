@@ -40,6 +40,10 @@ class AboutResource extends Resource
                     //->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),
+                Forms\Components\RichEditor::make('text_visao')
+                //->required()
+                ->maxLength(65535)
+                ->columnSpanFull(),
             ]);
     }
 
@@ -47,11 +51,13 @@ class AboutResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('text_quem_somos')
+                Tables\Columns\TextColumn::make('text_quem_somos')->limit(40)
                 ->html(),
-                Tables\Columns\TextColumn::make('text_missoes')
+                Tables\Columns\TextColumn::make('text_missoes')->limit(40)
                 ->html(),
-                Tables\Columns\TextColumn::make('text_valores')
+                Tables\Columns\TextColumn::make('text_valores')->limit(40)
+                ->html(),
+                Tables\Columns\TextColumn::make('text_visao')->limit(40)
                 ->html()
             ])
             ->filters([

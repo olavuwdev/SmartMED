@@ -11,10 +11,10 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class SpecialtyType
- * 
+ *
  * @property int $id
  * @property string $titulo
- * 
+ *
  * @property Collection|Specialist[] $specialists
  *
  * @package App\Models

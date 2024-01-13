@@ -31,10 +31,6 @@ class ChannelResource extends Resource
                 Forms\Components\TextInput::make('url')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('foto')
-                    ->image()
-                    ->required()
-                    //->maxLength(255),
             ]);
     }
 
@@ -46,9 +42,7 @@ class ChannelResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('url')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('foto')
-                ->width(70)
-                ->height(70),
+
             ])
             ->filters([
                 //

@@ -37,7 +37,8 @@ class SpecialistResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('foto_especialista')
                     ->required()
-                    ->preserveFilenames(),
+                    ->preserveFilenames()
+                    ->directory('especialistas'),
             ]);
     }
 

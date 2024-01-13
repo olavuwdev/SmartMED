@@ -26,9 +26,6 @@ class ServiceResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('icone')
-                    ->required()
-                    ->preserveFilenames(),
                 Forms\Components\TextInput::make('titulo')
                     ->required()
                     ->maxLength(255),
@@ -43,10 +40,10 @@ class ServiceResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('icone')
-                    ->width(70)
-                    ->height(70),
                 Tables\Columns\TextColumn::make('titulo')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('descricao')
+                    ->html()
                     ->searchable(),
             ])
             ->filters([

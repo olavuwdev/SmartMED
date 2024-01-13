@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id
  * @property string $titulo
  * @property string $url
- * @property string $foto
+ *
  *
  * @package App\Models
  */
@@ -26,6 +26,5 @@ class Channel extends Model
 	protected $fillable = [
 		'titulo',
 		'url',
-		'foto'
 	];
 }
