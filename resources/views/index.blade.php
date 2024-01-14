@@ -90,7 +90,7 @@
 		</div>
     </section>
 
-	<!-- /Section: intro -->
+
 
 	<!-- Section: boxes -->
     <section id="service" class="home-section paddingtop-110">
