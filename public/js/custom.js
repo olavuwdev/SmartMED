@@ -3,6 +3,15 @@ function urlWhatsApp(){
     $nome = $("#first_name").val();
     window.open("https://api.whatsapp.com/send?phone=1234&text=Olá,"+$nome+"%20deseja%20marcar%20consulta%20para%20qual%20especialidade?", "_blank");
 }
+
+// Chamando input ao apertar enter no formulario do whatsapp
+
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      urlWhatsApp();
+    }
+  }
 (function ($) {
 
 	var wow = new WOW(
@@ -23,17 +32,17 @@ function urlWhatsApp(){
 			$(".navbar-brand").addClass("reduce");
 
 			$(".navbar-custom ul.nav ul.dropdown-menu").css("margin-top","11px");
-		
+
 		} else {
 			$(".navbar-fixed-top").removeClass("top-nav-collapse");
 			$(".top-area").removeClass("top-padding");
 			$(".navbar-brand").removeClass("reduce");
 
 			$(".navbar-custom ul.nav ul.dropdown-menu").css("margin-top","16px");
-	
+
 		}
 	});
-	
+
 	//scroll to top
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 100) {
@@ -46,7 +55,7 @@ function urlWhatsApp(){
 		$("html, body").animate({ scrollTop: 0 }, 1000);
 			return false;
 	});
-	
+
 
 
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -55,10 +64,10 @@ function urlWhatsApp(){
 			var $anchor = $(this);
 			var nav = $($anchor.attr('href'));
 			if (nav.length) {
-			$('html, body').stop().animate({				
-				scrollTop: $($anchor.attr('href')).offset().top				
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
 			}, 1500, 'easeInOutExpo');
-			
+
 			event.preventDefault();
 			}
 		});
@@ -80,7 +89,7 @@ function urlWhatsApp(){
             itemsTabletSmall: [550,2],
             itemsMobile : [480,2],
 	});
-	
+
 	//nivo lightbox
 	$('.owl-carousel .item a').nivoLightbox({
 		effect: 'fadeScale',                             // The effect to use when showing the lightbox
@@ -101,10 +110,10 @@ function urlWhatsApp(){
 	jQuery(".appear").on("appear", function(data) {
 			var id = $(this).attr("id");
 			jQuery('.nav li').removeClass('active');
-			jQuery(".nav a[href='#" + id + "']").parent().addClass("active");					
+			jQuery(".nav a[href='#" + id + "']").parent().addClass("active");
 		});
 
-		
+
 		//parallax
         if ($('.parallax').length)
         {
@@ -118,8 +127,8 @@ function urlWhatsApp(){
             });
 
         }
-		
-		
+
+
 (function ($, window, document, undefined) {
 
     var gridContainer = $('#grid-container'),
@@ -216,12 +225,12 @@ function urlWhatsApp(){
     gridContainer.cubeportfolio('showCounter', filtersContainer.find('.cbp-filter-item'));
 
 })(jQuery, window, document);
-		
-	
+
+
 })(jQuery);
 $(window).load(function() {
 	$(".loader").delay(100).fadeOut();
 	$("#page-loader").delay(100).fadeOut("fast");
 });
 
-	
+
